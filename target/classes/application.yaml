@@ -1,0 +1,27 @@
+server:
+  port: 8088
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://139.186.170.118:3306/weaving?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mariadb://localhost:3306/weaving?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 521100SUminhan@
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 5
+      max-lifetime: 1800000
+
+#配置swagger登陆验证
+swagger:
+  production: false
+  basic:
+    enable: true
+    username: suumhan
+    password: suumhan@
+
+mybatis:
+  mapper-locations:
+  type-aliases-package: com/wen/weaving/entity

@@ -1,0 +1,26 @@
+server:
+  port: 8088
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: xxx
+    username: xxx
+    password: xxx
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 5
+      max-lifetime: 1800000
+
+#配置swagger登陆验证
+swagger:
+  production: false
+  basic:
+    enable: true
+    username: xxxx
+    password: xxxx
+
+mybatis:
+  mapper-locations:
+  type-aliases-package: com/wen/weaving/entity
